@@ -6,3 +6,5 @@ user:
   password:
     max_length: 6
 
+user_helper:
+  size: 80
