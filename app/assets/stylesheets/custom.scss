@@ -100,13 +100,13 @@ footer {
 
 .img_kitten {
   img {
-  width: 800px;
+    width: 800px;
   }
 }
 
 .img_logo {
   img {
-  width: 50px;
+    width: 50px;
   }
 }
 
@@ -189,4 +189,18 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
