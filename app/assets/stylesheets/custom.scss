@@ -110,6 +110,15 @@ footer {
   }
 }
 
+/* Users index */
+
+.table-th {
+  text-align: center;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
 @mixin box_sizing {
   box-sizing: border-box;
   -moz-box-sizing: border-box;

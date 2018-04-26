@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
 
+  scope :index_user, ->{select("id, name, email").order(created_at: :desc)}
+
   before_save{email.downcase!}
 
   validates :name,  presence: true,
@@ -11,7 +13,7 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, presence: true,
-    length: {minimum: Settings.user.password.max_length}
+    length: {minimum: Settings.user.password.max_length}, allow_nil: true
 
   def self.digest string
     cost =
@@ -29,7 +31,7 @@ class User < ApplicationRecord
 
   def remember
     self.remember_token = User.new_token
-    update_attributes :remember_digest, User.digest(remember_token)
+    update_attributes remember_digest: User.digest(remember_token)
   end
 
   def authenticated? remember_token
@@ -38,6 +40,10 @@ class User < ApplicationRecord
   end
 
   def forget
-    update_attributes :remember_digest, nil
+    update_attributes remember_digest: nil
+  end
+
+  def current_user? user
+    self == user
   end
 end

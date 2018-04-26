@@ -8,3 +8,8 @@ user:
 
 user_helper:
   size: 80
+  per_page: 20
+
+users:
+  index:
+    size: 50
