@@ -1,3 +1,3 @@
-<%= t "user_mailer.account_html.hi" %> <%= @user.name %>,
-<%= t "user_mailer.account_html.account" %>
+<%= t ".hi" %> <%= @user.name %>,
+<%= t ".account" %>
 <%= edit_account_activation_url @user.activation_token, email: @user.email %>

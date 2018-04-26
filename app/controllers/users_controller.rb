@@ -5,11 +5,12 @@ class UsersController < ApplicationController
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
   before_action :find_user, only: %i(show edit update destroy)
+  before_action :list_microposts, only: :show
 
   def index
     @users = User.index_user
                  .page(params[:page])
-                 .per(Settings.user_helper.per_page)
+                 .per Settings.user.per_page
   end
 
   def show; end
@@ -77,6 +78,13 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user
     flash[:danger] = t ".danger"
-    redirect_to root_url
+    redirect_to users_path
+  end
+
+  def list_microposts
+    @microposts = @user.microposts
+                       .order_by_created_at
+                       .page(params[:page])
+                       .per Settings.user.per_page
   end
 end
