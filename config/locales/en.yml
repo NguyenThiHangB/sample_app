@@ -36,3 +36,52 @@ en:
   helpers:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
+
+  layouts:
+    footer:
+      the: "The "
+      rails: "Ruby on Rails Tutorial"
+      by: "by"
+      about: "About"
+      contact: "Contact"
+      new: "News"
+
+    header:
+      sample: "Sample App"
+      home: "Home"
+      help: "Help"
+      login: " Login"
+
+  static_pages:
+    about:
+      h1: "About"
+      the: "The "
+      rails: "Ruby on Rails Tutorial"
+      is: "is a"
+      book: "book"
+      and: "and"
+      screen: "screencast series"
+      a: "to teach web development with"
+      ruby: "Ruby on Rails"
+      sample: ". This is the sample application for the tutorial."
+
+    contact:
+      h1: "Contact"
+      p: "Contact the Ruby on Rails Tutorial about the sample app at the"
+      contact: "contact page."
+
+    help:
+      h1: "Help"
+      p: "Get help on the Ruby on Rails Tutorial at the"
+      help: "Rails Tutorial help page"
+      a: "To get help on this sample app, see the"
+      rails: "Ruby on Rails Tutorial"
+      name: " book."
+
+    home:
+      h1: "Welcome to the Sample App"
+      h2: "This is the home page for the"
+      rails: "Ruby on Rails Tutorial"
+      h2_end: "sample application."
+      signup: "Sign up now!"
+
