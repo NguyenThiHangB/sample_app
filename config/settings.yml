@@ -13,3 +13,6 @@ user_helper:
 users:
   index:
     size: 50
+
+session_controller:
+  session: 1
