@@ -30,9 +30,13 @@
 /config/master.key
 
 # Ignore rubocop file
-/rubocop.yml
-/rubocop_disabled.yml
-/rubocop_enabled.yml
+/.rubocop.yml
+/.rubocop_disabled.yml
+/.rubocop_enabled.yml
 
 # Ignore test files
 /test/*
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
