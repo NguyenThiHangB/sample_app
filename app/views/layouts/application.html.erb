@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= full_title yield :title %></title>
+<<<<<<< ccae9a03b5ed2214de277da09394339bbf0c91ff
     <%= render "layouts/rails_default" %>
     <%= render "layouts/shim" %>
   </head>
@@ -11,5 +12,16 @@
       <%= yield %>
     </div>
     <%= render "layouts/footer" %>
+=======
+    <%= render 'layouts/rails_default' %>
+    <%= render 'layouts/shim' %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
+>>>>>>> Finish layout and routes
   </body>
 </html>
