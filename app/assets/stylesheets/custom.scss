@@ -37,7 +37,7 @@ h1 {
 }
 
 h2 {
-  color: $cl-gray1;
+  color: $color_tapa_approx;
   font-size: 1.2em;
   font-weight: normal;
   letter-spacing: -1px;
@@ -53,7 +53,7 @@ p {
 /* header */
 
 .logo {
-  color: $cl-white;
+  color: $white;
   float: left;
   font-size: 1.7em;
   font-weight: bold;
@@ -64,24 +64,24 @@ p {
 }
 
 .logo:hover {
-  color: $cl-white;
+  color: $white;
   text-decoration: none;
 }
 
 /* footer */
 
 footer {
-  border-top: 1px solid $cl-gray2;
-  color: $cl-gray1;
+  border-top: 1px solid $color_gray_nurse_approx;
+  color: $color_tapa_approx;
   font-size: 15px;
   height: 100px;
   margin-top: 45px;
   padding-top: 10px;
   a {
-    color: $cl-gray3;
+    color: $color_fuscous_gray_approx;
   }
   a:hover {
-    color: #cl-blue;
+    color: #color_log_cabin_approx;
   }
   small {
     float: left;
@@ -89,9 +89,23 @@ footer {
   ul {
     float: right;
     list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
   }
-  ul li {
-    float: left;
-    margin-left: 15px;
+}
+
+/* home */
+
+.img_kitten {
+  img {
+  width: 800px;
+  }
+}
+
+.img_logo {
+  img {
+  width: 50px;
   }
 }

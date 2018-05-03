@@ -1,22 +1,15 @@
 <footer class="footer">
   <small>
-<<<<<<< ccae9a03b5ed2214de277da09394339bbf0c91ff
-    <%= t ".the" %> <%= link_to "Ruby on Rails Tutorial", "http://www.railstutorial.org/" %>
+    <%= t ".the" %> <%= link_to t("layouts.footer.rails"),
+      "http://www.railstutorial.org/" %>
     <%= t ".by" %> <%= link_to "Michael Hartl", "http://www.michaelhartl.com/" %>
-=======
-    The <a href="<%= t ".urlrails" %>"><%= t ".rails" %></a>
-    by <a href="<%= t ".urlname" %>"><%= t ".name" %></a>
->>>>>>> Finish layout and routes
   </small>
   <nav>
     <ul class="right">
-      <li><%= link_to "About", about_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-<<<<<<< ccae9a03b5ed2214de277da09394339bbf0c91ff
-      <li><%= link_to "News", "http://news.railstutorial.org/" %></li>
-=======
-      <li><a href="<%= t ".urlnews" %>"><%= t ".news" %></a></li>
->>>>>>> Finish layout and routes
+      <li><%= link_to t("layouts.footer.about"), about_path %></li>
+      <li><%= link_to t("layouts.footer.contact"), contact_path %></li>
+      <li><%= link_to t("layouts.footer.new"),
+        "http://news.railstutorial.org/" %></li>
     </ul>
   </nav>
 </footer>

@@ -1,11 +1,14 @@
 <% provide(:title, "About") %>
-<h1>About</h1>
+<h1><%= t ".h1" %></h1>
 <p>
-  <%= t ".the" %> <%= link_to "Ruby on Rails Tutorial", "http://www.railstutorial.org/" %>
+  <%= t ".the" %> <%= link_to t("static_pages.about.rails"),
+    "http://www.railstutorial.org/" %>
   <%= t ".is" %>
-  <%= link_to "book", "http://www.railstutorial.org/book" %> <%= t ".and" %>
-  <%= link_to "screencast series", "http://screencasts.railstutorial.org/" %>
+  <%= link_to t("static_pages.about.book"),
+    "http://www.railstutorial.org/book" %> <%= t ".and" %>
+  <%= link_to t("static_pages.about.screen"),
+    "http://screencasts.railstutorial.org/" %>
   <%= t ".a" %>
-  <%= link_to "Ruby on Rails", "http://rubyonrails.org/" %>
+  <%= link_to t("static_pages.about.ruby"), "http://rubyonrails.org/" %>
   <%= t ".sample" %>
 </p>

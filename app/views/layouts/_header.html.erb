@@ -1,19 +1,12 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-<<<<<<< ccae9a03b5ed2214de277da09394339bbf0c91ff
-    <%= link_to "Sample App", root_path, class: "logo" %>
-=======
-    <%= link_to "Sample App", root_path, class:"logo" %>
->>>>>>> Finish layout and routes
+    <%= link_to t("layouts.header.sample"), root_path, class: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
-<<<<<<< ccae9a03b5ed2214de277da09394339bbf0c91ff
-        <li><%= link_to " Login", "#", class: "glyphicon glyphicon-log-in" %></li>
-=======
-        <li><%= link_to " Login", '#', class:"glyphicon glyphicon-log-in" %></li>
->>>>>>> Finish layout and routes
+        <li><%= link_to t("layouts.header.home"), root_path %></li>
+        <li><%= link_to t("layouts.header.help"), help_path %></li>
+        <li><%= link_to t("layouts.header.login"), "#",
+          class: "glyphicon glyphicon-log-in" %></li>
       </ul>
     </nav>
   </div>
