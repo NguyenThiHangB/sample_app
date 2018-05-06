@@ -1,12 +1,13 @@
 source "https://rubygems.org"
 
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "2.3.1"
 
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "3.3.7"
 gem "coffee-rails", "~> 4.2"
+gem "config"
 gem "i18n-js"
 gem "jbuilder", "~> 2.5"
 gem "puma", "~> 3.11"
@@ -18,7 +19,7 @@ gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
-  gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "byebug", platforms: %i(mri mingw x64_mingw)
   gem "sqlite3"
 end
 
@@ -36,4 +37,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
+gem "tzinfo-data", platforms: %i(mingw mswin x64_mingw jruby)
