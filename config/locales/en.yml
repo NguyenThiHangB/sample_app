@@ -21,7 +21,7 @@ en:
       home: "Home"
       help: "Help"
       login: " Login"
-      logout: "logout"
+      logout: "Logout"
       user: "Users"
       account: "Account"
       profile: "Profile"
@@ -84,3 +84,4 @@ en:
       login: "Log in"
       new: "User create?"
       signup: "Sign up now!"
+      span: "Remember me on this computer"
