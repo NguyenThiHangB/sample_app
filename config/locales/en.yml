@@ -63,16 +63,21 @@ en:
 
   controllers:
     users:
-      messages: "Welcome to the Sample App!"
+      messages: "Please check your email to activate your account."
       create_danger: "Create user not success"
-      error: "Not find user"
       profile: "Profile updated"
       deleted: "User deleted"
       danger: "User not deleted"
+      error: "Not find user"
       login: "Please log in."
 
     sessions:
+      message: "Account not activated.Check your email for the activation link."
       danger: "Invalid email/password combination"
+
+    accout_activations:
+      success: "Account activated!"
+      danger: "Invalid activation link"
 
   users:
     new:
@@ -107,15 +112,15 @@ en:
       new: "User create?"
       signup: "Sign up now!"
       span: "Remember me on this computer"
-      create: "Create my account"
+      forgot: "Forgot password"
 
-  shared:
-    error_messages:
-      error: "The form contains"
+  mailers:
+    user_mailer:
+      subject: "Account activation"
 
-  sessions:
-    new:
-      login: "Log in"
-      new: "User create?"
-      signup: "Sign up now!"
-      span: "Remember me on this computer"
+  user_mailer:
+    account_html:
+      sample: "Sample App"
+      hi: "Hi"
+      account: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
