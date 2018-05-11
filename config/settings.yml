@@ -5,6 +5,8 @@ user:
     max_length: 255
   password:
     max_length: 6
+  reset:
+    password: 2
 
 user_helper:
   size: 80

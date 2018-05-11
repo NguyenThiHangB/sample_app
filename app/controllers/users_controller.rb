@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: %i(index edit update destroy)
+  before_action :logged_in_user, except: %i(new create)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
   before_action :find_user, only: %i(show edit update destroy)
@@ -22,10 +22,10 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       @user.send_activation_email
-      flash[:info] = t "controllers.users.messages"
+      flash[:info] = t ".info"
       redirect_to root_url
     else
-      flash[:danger] = t "controllers.users.create_danger"
+      flash[:danger] = t ".danger"
       render :new
     end
   end
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes user_params
-      flash[:success] = t "controllers.users.profile"
+      flash[:success] = t ".success"
       redirect_to @user
     else
       render :edit
@@ -43,9 +43,9 @@ class UsersController < ApplicationController
 
   def destroy
     if @user.destroy
-      flash[:success] = t "controllers.users.deleted"
+      flash[:success] = t ".success"
     else
-      flash[:danger] = t "controllers.users.danger"
+      flash[:danger] = t ".danger"
     end
     redirect_to users_path
   end
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
   def logged_in_user
     return if logged_in?
     store_location
-    flash[:danger] = t "controllers.users.login"
+    flash[:danger] = t ".danger"
     redirect_to login_url
   end
 
@@ -76,7 +76,7 @@ class UsersController < ApplicationController
   def find_user
     @user = User.find_by id: params[:id]
     return if @user
-    flash[:danger] = t "controllers.users.error"
-    redirect_to users_path
+    flash[:danger] = t ".danger"
+    redirect_to root_url
   end
 end
