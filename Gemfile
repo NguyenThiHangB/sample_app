@@ -8,6 +8,7 @@ gem "bcrypt", "3.1.11"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "3.3.7"
+gem "carrierwave", "1.2.2"
 gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "faker", "1.7.3"
@@ -16,6 +17,7 @@ gem "i18n-js"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "kaminari"
+gem "mini_magick", "4.7.0"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.0"
 gem "rails-controller-testing"
@@ -30,6 +32,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "fog", "1.42"
   gem "listen", "3.1.5"
   gem "pg", "0.20.0"
   gem "spring"
