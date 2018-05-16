@@ -12,6 +12,10 @@ en:
       danger: "Please log in."
     find_user:
       danger: "Not find user"
+    following:
+      title: "Following"
+    followers:
+      title: "Followers"
     new:
       title: "Sign up"
       button: "Create my account"
@@ -33,6 +37,14 @@ en:
       confirm: "You sure?"
     show:
       microposts: "Microposts"
+    show_follow:
+      link: "View my profile"
+    follow:
+      submit: "Follow"
+    unfollow:
+      submit: "Unfollow"
+    user:
+      confirm: " Are you sure?"
 
   sessions:
     create:
@@ -43,7 +55,7 @@ en:
       new: "User create?"
       signup: "Sign up now!"
       span: "Remember me on this computer"
-      forgot: "Forgot password"
+      forgot: "Forgot your password?"
 
   account_activations:
     edit:
@@ -99,7 +111,6 @@ en:
       account: "Welcome to the Sample App! Click on the link below to activate your account:"
       activate: "Activate"
     password_reset:
-      subject: "Password reset"
       title: "Password reset"
       click: "To reset your password click the link below:"
       link_to: "Reset password"
@@ -173,3 +184,7 @@ en:
       content: "Compose new micropost..."
       submit: "Post"
       size_image: "Maximum file size is 5MB. Please choose a smaller file."
+      change: "Change"
+    stats:
+      following: "Following"
+      followers: "Followers"

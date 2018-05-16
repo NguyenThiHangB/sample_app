@@ -8,6 +8,8 @@ user:
   reset:
     password: 2
   per_page: 20
+  gravatar:
+    size: 52
 
 user_helper:
   size: 80
@@ -38,3 +40,6 @@ static_pages:
 uploader:
   picture:
     size: 400
+
+show_follow:
+  size: 30

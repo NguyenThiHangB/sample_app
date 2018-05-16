@@ -12,4 +12,9 @@ module UsersHelper
     params_page = 1 if params_page.nil?
     (params_page.to_i - 1) * per_page.to_i + index.to_i + 1
   end
+
+  def unfollow user
+    @user = User.find_by id: params[:id]
+    @follower = current_user.active_relationships.find_by followed_id: @user.id
+  end
 end

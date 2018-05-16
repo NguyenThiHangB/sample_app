@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, except: %i(new create)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
-  before_action :find_user, only: %i(show edit update destroy)
+  before_action :find_user, except: :index
   before_action :list_microposts, only: :show
 
   def index
@@ -49,6 +49,18 @@ class UsersController < ApplicationController
       flash[:danger] = t ".danger"
     end
     redirect_to users_path
+  end
+
+  def following
+    @title = t ".title"
+    @users = @user.following.page(params[:page]).per Settings.user.per_page
+    render :show_follow
+  end
+
+  def followers
+    @title = t ".title"
+    @users = @user.followers.page(params[:page]).per Settings.user.per_page
+    render :show_follow
   end
 
   private

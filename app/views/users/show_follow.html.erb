@@ -5,7 +5,7 @@
       <%= gravatar_for @user %>
       <h1><%= @user.name %></h1>
       <span><%= link_to t(".link"), @user %></span>
-      <span><b><%= t t(".microposts") %></b> <%= @user.microposts.count %></span>
+      <span><b><%= t(".microposts") %></b> <%= @user.microposts.count %></span>
     </section>
     <section class="stats">
       <%= render "shared/stats" %>
@@ -13,7 +13,7 @@
         <div class="user_avatars">
           <% @users.each do |user| %>
             <%= link_to gravatar_for(user,
-                size: Settings.users.show_follow.size), user %>
+                size: Settings.show_follow.size), user %>
           <% end %>
         </div>
       <% end %>
@@ -22,10 +22,10 @@
   <div class="col-md-8">
     <h3><%= @title %></h3>
     <% if @users.any? %>
-      <ul class="users_follow">
+      <ul class="users follow">
         <%= render @users %>
       </ul>
-      <%= paginate @users %>
+      <%= paginate @users, theme: "twitter-bootstrap-3" %>
     <% end %>
   </div>
 </div>
